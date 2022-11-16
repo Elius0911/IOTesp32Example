@@ -3,11 +3,14 @@
 
 const char ssid[]="cc123"; //修改為你家的WiFi網路名稱
 const char pwd[]="123456cc"; //修改為你家的WiFi密碼
-String HOST_NAME="http://192.168.100.217";
-String PATH_NAME="/espImport.php";
+
+String HOST_NAME="http://192.168.100.217"; //修改為你電腦的IP
+String PATH_NAME="/espImport.php"; //修改為PHP的檔案路徑
 String queryString;
 String sentences;
+
 String n[14]={"0","0","0","0","0","0","0","0","0","0","0","0","0","0"};
+
 void send(){
   HTTPClient http;
   http.begin(HOST_NAME + PATH_NAME + queryString); //HTTP
